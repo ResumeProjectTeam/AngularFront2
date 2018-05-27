@@ -12,7 +12,7 @@
  * limitations under the License.
  */
 
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 import { FormGroup, FormArray, FormBuilder,FormControl,
     Validators  } from '@angular/forms';
 import { UserService } from './User.service';
