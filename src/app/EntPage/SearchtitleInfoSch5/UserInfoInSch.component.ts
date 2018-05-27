@@ -200,7 +200,7 @@ export class UserInfoInSchComponent implements OnInit {
   };
   loadOption(cname: string): Promise<any> {
     let tempList = [];
-    
+    let tempList2 = [];
     cname =cname.toLowerCase();
     //score = score.toLowerCase();
     return this.serviceUserInfoInSch.getAll()
@@ -211,9 +211,12 @@ export class UserInfoInSchComponent implements OnInit {
         if(asset.schoolName.toLowerCase() == cname)
           tempList.push(asset);
           else if(cname.length == 0)
-          tempList = this.myUserInfoInSchList;
+          tempList2.push(asset);
       });
-      if(tempList.length == 0) alert("검색결과가 없습니다. 다시 입력해주세요");
+      if(tempList.length == 0) {
+        alert("검색결과가 없습니다. 다시 입력해주세요");
+        this.myUserInfoInSchList = tempList2;
+    }
       else this.myUserInfoInSchList = tempList;
     })
     .catch((error) => {
