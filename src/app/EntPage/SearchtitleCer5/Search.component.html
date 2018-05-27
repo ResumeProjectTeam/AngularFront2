@@ -15,8 +15,8 @@
     <div class="row">
         <div style="margin-left: auto; margin-right: auto;">
           <div class="form-inline">
-            <input placeholder="자격증 이름" class="form-control input-lg input" #place (keyup.enter)="place.value=''; language.value='';" />
-            <input placeholder="점수" class="form-control input-lg input" #language (keyup.enter)="place.value=''; language.value='';" />
+            <input placeholder="자격증 이름" class="form-control input-lg input" #place (keyup.enter)="loadOption(place.value, language.value);place.value=''; language.value='';" />
+            <input placeholder="점수" class="form-control input-lg input" #language (keyup.enter)="loadOption(place.value, language.value);place.value=''; language.value='';" />
             <button class="btn btn-lg btn-info" (click)="loadOption(place.value, language.value); place.value=''; language.value='';">Search</button>
           </div>
         </div>
