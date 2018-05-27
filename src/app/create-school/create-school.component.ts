@@ -56,7 +56,7 @@ export class CreateSchoolComponent implements OnInit {
 
     const issueParticipant = {
       participant: "hansung.ac.kr.participants.School#" + this.schId.value,
-      userID: this.schName.value,
+      userID: this.schId.value,
       options: {}
     };
     

@@ -148,6 +148,7 @@ export class UserComponent implements OnInit {
 
   loadOption(cname: string): Promise<any> {
     let tempList = [];
+    let tempList2 = [];
     
     cname =cname.toLowerCase();
     //score = score.toLowerCase();
@@ -158,10 +159,11 @@ export class UserComponent implements OnInit {
       result.forEach(asset => {
         if(asset.userName.toLowerCase() == cname)
           tempList.push(asset);
-        
+        else 
+          tempList2.push(asset);
       });
-      if(tempList.length == 0) alert("검색결과가 없습니다. 다시 입력해주세요");
-      else this.allParticipants = tempList;
+      if(cname.length == 0){this.allParticipants = tempList2;} 
+      else {this.allParticipants = tempList;}
     })
     .catch((error) => {
         if(error == 'Server error'){
