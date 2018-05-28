@@ -15,7 +15,7 @@ import 'rxjs/add/operator/toPromise';
 export class HeaderComponent implements OnInit {
     pushRightClass: string = 'push-right';
     currentUserId: string;
-	
+    errorMessage: string;
 
     constructor(private translate: TranslateService, public serviceHeader: HeaderService, router: Router) {
 
@@ -53,7 +53,6 @@ export class HeaderComponent implements OnInit {
         Id = result['participant'];
         Id = Id.split('#');
         this.currentUserId = Id[1];
-	console.log("loadUserId : " + this.currentUserId);
       })
       .catch((error) => {
 
