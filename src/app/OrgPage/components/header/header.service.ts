@@ -31,7 +31,7 @@ export class HeaderService {
     constructor(private dataService: DataService<Organization>) {
     };
 
-    public getAll(): Observable<User[]> {
+    public getAll(): Observable<Organization[]> {
         return this.dataService.getAll(this.NAMESPACE);
     }
 

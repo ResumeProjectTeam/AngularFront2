@@ -28,7 +28,7 @@ export class HeaderService {
 
 
 
-    constructor(private dataService: DataService<User>) {
+    constructor(private dataService: DataService<School>) {
     };
 
     public getAll(): Observable<School[]> {

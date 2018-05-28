@@ -15,7 +15,7 @@ import 'rxjs/add/operator/toPromise';
 export class HeaderComponent implements OnInit {
     pushRightClass: string = 'push-right';
     currentEntId: string;
-	
+    errorMessage: string;
 
     constructor(private translate: TranslateService, public serviceHeader: HeaderService, router: Router) {
 
