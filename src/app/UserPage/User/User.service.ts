@@ -35,7 +35,7 @@ export class UserService {
         return this.dataService.getAll(this.NAMESPACE);
     }
 	
-    public getSystemPing(): Observable<Json> {
+    public getSystemPing(): Observable<JSON> {
 	return this.dataService.getSystemPing();
     }
 
