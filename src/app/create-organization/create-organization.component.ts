@@ -57,7 +57,7 @@ export class CreateOrganizationComponent implements OnInit {
 
     const issueParticipant = {
       participant: "hansung.ac.kr.participants.Organization#" + this.orgId.value,
-      userID: this.orgName.value,
+      userID: this.orgId.value,
       options: {}
     };
     

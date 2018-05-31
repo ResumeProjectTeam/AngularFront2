@@ -68,7 +68,7 @@ export class CreateEnterpriseComponent implements OnInit {
 
     const issueParticipant = {
       participant: "hansung.ac.kr.participants.Enterprise#" + this.entId.value,
-      userID: this.entName.value,
+      userID: this.entId.value,
       options: {}
     };
 

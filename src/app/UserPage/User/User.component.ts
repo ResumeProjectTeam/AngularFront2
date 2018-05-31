@@ -146,6 +146,23 @@ export class UserComponent implements OnInit {
     var result = targetDate.toLocaleDateString('ko-KR', options);
      return result;
   }
+
+/*
+ getCurrentUserId(): Promise<String> {
+
+	return this.serviceUser.getSystemPing()
+	.tomPromise()
+	.then((result) => {
+         var Id;
+     	 Id = result['participant'];
+         Id = Id.split('#');
+	 return Id;
+	 })
+
+ }
+
+*/
+
   loadAll(): Promise<any> {
     let tempList = [];
     return this.serviceUser.getAll()

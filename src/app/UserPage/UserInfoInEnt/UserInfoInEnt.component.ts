@@ -89,7 +89,7 @@ export class UserInfoInEntComponent implements OnInit {
         
   
       
-          retirementDate = new FormControl("2001-01-01", Validators.required);
+          retirementDate = new FormControl("", Validators.required);
         
   
       
@@ -361,12 +361,6 @@ export class UserInfoInEntComponent implements OnInit {
         
       
         
-          "dateOfEmployment":this.dateOfEmployment.value,
-        
-
-          "retirementDate":this.retirementDate.value,
-      
-        
           "isPublic":this.isPublic.value,
         
       
@@ -375,6 +369,12 @@ export class UserInfoInEntComponent implements OnInit {
         
       
     };
+
+    if(this.dateOfEmployment.value != null && this.dateOfEmployment.value != "") 
+	this.Transaction.dateOfEmployment = this.dateOfEmployment.value;
+    if(this.retirementDate.value != null && this.retirementDate.value != "")
+	this.Transaction.retirementDate = this.retirementDate.value; 
+
 
     this.myForm2.setValue({
       

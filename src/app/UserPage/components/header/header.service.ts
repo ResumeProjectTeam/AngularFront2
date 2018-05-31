@@ -1,5 +1,5 @@
-/*
- * Licensed under the Apache License, Version 2.0 (the "License");
+
+/*censed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -13,18 +13,18 @@
  */
 
 import { Injectable } from '@angular/core';
-import { DataService } from '../data.service';
+import { DataService } from '../../data.service';
 import { Observable } from 'rxjs/Observable';
-import { User } from '../hansung.ac.kr.participants';
+import { User } from '../../hansung.ac.kr.participants';
 import 'rxjs/Rx';
 
 // Can be injected into a constructor
 @Injectable()
-export class UserService {
+export class HeaderService {
 
-	
-		private NAMESPACE: string = 'User';
-	
+
+                private NAMESPACE: string = 'User';
+
 
 
 
@@ -34,9 +34,9 @@ export class UserService {
     public getAll(): Observable<User[]> {
         return this.dataService.getAll(this.NAMESPACE);
     }
-	
+
     public getSystemPing(): Observable<JSON> {
-	return this.dataService.getSystemPing();
+        return this.dataService.getSystemPing();
     }
 
     public getparticipant(id: any): Observable<User> {
@@ -56,3 +56,4 @@ export class UserService {
     }
 
 }
+

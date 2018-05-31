@@ -4,6 +4,7 @@
     <div class="row">
         <div class="col-md-9">
             <h1 class="participant-title" id='participantName'>  기본이력</h1>
+	    <b> 기본이력은 1개만 생성 가능합니다. </b>
         </div>
         <div class="col-md-3">
         <button class="btn btn-lg btn-info" (click)="open(content)"><span style="font-size: 14px;font-family: inherit;border-right:1px solid rgba(255,255,255,0.5);padding-right:0.6em;margin-right:0.5em;vertical-align:middle;">
@@ -169,7 +170,7 @@
                       <td class="asset-properties">{{asset.isPublic}}</td>
 
                   <td>
-                    <!--
+                    
                     <button (click)="getForm(asset.assetId);" type="button" class="btn btn-update" data-toggle="modal" data-target="#updateAssetModal">
                       <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                         width="12.8px" height="12.8px" viewBox="0 0 30.7 30.7" style="enable-background:new 0 0 30.7 30.7;" xml:space="preserve">
@@ -183,7 +184,7 @@
                         </g>
                       </svg>
                     </button>
-                  -->
+	 &nbsp; 
 
                     <button (click)="open(del)" (click)="setId(asset.assetId);" type="button" class="btn btn-delete" data-toggle="modal" data-target="#deleteAssetModal">
                       <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -225,3 +226,123 @@
 
   </div>
 </ng-template>
+
+
+
+
+<div class="modal fade" id="updateAssetModal" tabindex="-1" role="dialog" aria-labelledby="updateAssetModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="updateAssetModalLabel">Update Asset</h4>
+        <p class="modal-intro"> * 입력칸은 반드시 채워주세요</p>
+      </div>
+      <form [formGroup]="myForm">
+        <div class="modal-body">
+
+
+          <div class="form-group text-left">
+            <label for="name">이름 (수정 불가능)</label>
+
+
+            <input [ngModel]="name" formControlName="name" class="form-control" disabled="disabled">
+
+
+          </div>
+
+
+
+          <div class="form-group text-left" style="display:none;">
+            <label for="assetId">assetId</label>
+
+
+            <input [ngModel]="assetId" formControlName="assetId" class="form-control" disabled="disabled" >
+
+
+          </div>
+
+
+          <div class="form-group text-left" style="display:none;">
+            <label for="ownerId">ownerId</label>
+
+
+            <input [ngModel]="ownerId" formControlName="ownerId" class="form-control" disabled="disabled" >
+
+
+          </div>
+
+          <div class="form-group text-left">
+            <label for="dob">생년월일 (수정 불가능)</label>
+
+
+            <input [ngModel]="dob" formControlName="dob" type="text" class="form-control"  disabled="disabled">
+
+
+          </div>
+
+          <div class="form-group text-left">
+            <label for="supportField">전공분야*</label>
+
+
+            <input [ngModel]="supportField" formControlName="supportField" type="text" class="form-control">
+
+
+          </div>
+
+          <div class="form-group text-left">
+            <label for="salaryRequirement">희망연봉</label>
+
+
+            <input [ngModel]="salaryRequirement" formControlName="salaryRequirement" type="text" class="form-control">
+
+
+          </div>
+
+          <div class="form-group text-left">
+            <label for="majorActivities">주요활동</label>
+
+
+            <input [ngModel]="majorActivities" formControlName="majorActivities" type="text" class="form-control">
+
+
+          </div>
+
+          <div class="form-group text-left">
+            <label for="socialExperience">사회경험</label>
+
+
+            <input [ngModel]="socialExperience" formControlName="socialExperience" type="text" class="form-control">
+
+
+          </div>
+
+          <div class="form-group text-left">
+            <label for="skillsAndCapabilities">보유기술 및 기타능력</label>
+
+
+            <input [ngModel]="skillsAndCapabilities" formControlName="skillsAndCapabilities" type="text" class="form-control">
+
+
+          </div>
+
+          <div class="form-group text-left">
+            <label for="isPublic">공개여부</label>
+
+
+            <input [ngModel]="isPublic" formControlName="isPublic" type="checkbox" class="form-control">
+
+
+          </div>
+
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
+          <button (click)="updateAsset(myForm)" type="submit" class="btn btn-success" data-dismiss="modal">확인</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+

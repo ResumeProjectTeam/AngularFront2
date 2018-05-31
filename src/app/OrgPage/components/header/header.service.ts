@@ -1,5 +1,5 @@
-/*
- * Licensed under the Apache License, Version 2.0 (the "License");
+
+/*censed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -13,46 +13,47 @@
  */
 
 import { Injectable } from '@angular/core';
-import { DataService } from '../data.service';
+import { DataService } from '../../data.service';
 import { Observable } from 'rxjs/Observable';
-import { User } from '../hansung.ac.kr.participants';
+import { Organization } from '../../hansung.ac.kr.participants';
 import 'rxjs/Rx';
 
 // Can be injected into a constructor
 @Injectable()
-export class UserService {
-
-	
-		private NAMESPACE: string = 'User';
-	
+export class HeaderService {
 
 
+                private NAMESPACE: string = 'Organization';
 
-    constructor(private dataService: DataService<User>) {
+
+
+
+    constructor(private dataService: DataService<Organization>) {
     };
 
-    public getAll(): Observable<User[]> {
+    public getAll(): Observable<Organization[]> {
         return this.dataService.getAll(this.NAMESPACE);
     }
-	
+
     public getSystemPing(): Observable<JSON> {
-	return this.dataService.getSystemPing();
+        return this.dataService.getSystemPing();
     }
 
-    public getparticipant(id: any): Observable<User> {
+    public getparticipant(id: any): Observable<Organization> {
       return this.dataService.getSingle(this.NAMESPACE, id);
     }
 
-    public addParticipant(itemToAdd: any): Observable<User> {
+    public addParticipant(itemToAdd: any): Observable<Organization> {
       return this.dataService.add(this.NAMESPACE, itemToAdd);
     }
 
-    public updateParticipant(id: any, itemToUpdate: any): Observable<User> {
+    public updateParticipant(id: any, itemToUpdate: any): Observable<Organization> {
       return this.dataService.update(this.NAMESPACE, id, itemToUpdate);
     }
 
-    public deleteParticipant(id: any): Observable<User> {
+    public deleteParticipant(id: any): Observable<Organization> {
       return this.dataService.delete(this.NAMESPACE, id);
     }
 
 }
+
