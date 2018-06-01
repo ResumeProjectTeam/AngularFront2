@@ -23,7 +23,8 @@
               <table style="margin-left: auto; margin-right: auto;" >
                   <thead class="thead">
                   <tr class="thead-cols">
-        
+       
+		    <th class="info">학생 ID</th> 
                    
                     <th class="info">학교 ID</th>
         
@@ -47,8 +48,9 @@
                 <tbody>
                   <tr *ngFor="let asset of myUserInfoInSchList">
         
-        
-                    
+        	
+		
+               	    <td class="asset-properties">{{asset.ownerId}}</td>    
         
                     <td class="asset-properties">{{asset.authorizedParticipantId}}</td>
         

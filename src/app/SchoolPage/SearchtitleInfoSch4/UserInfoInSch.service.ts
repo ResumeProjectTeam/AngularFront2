@@ -40,6 +40,9 @@ export class UserInfoInSchService {
     public getAll(): Observable<UserInfoInSch[]> {
         return this.dataService.getAll(this.NAMESPACE);
     }
+    public getAll2():  Observable<Authentication[]> {
+        return this.dataService3.getAll(this.NAMESPACE3);
+    }
 
     public getAsset(id: any): Observable<UserInfoInSch> {
       return this.dataService.getSingle(this.NAMESPACE, id);

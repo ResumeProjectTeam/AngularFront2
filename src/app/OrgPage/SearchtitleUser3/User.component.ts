@@ -350,7 +350,6 @@ export class UserComponent implements OnInit {
 
 
   getUserDetails(id: any) {
-    console.log("test@@@@@@@@@2");
     this.setId(id);
     this.getMyAuthenticationList();
     this.getUser(id)

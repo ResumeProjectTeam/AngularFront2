@@ -2,6 +2,10 @@ h1 {
 	color: white;
 }
 
+h2 {
+	color: black;
+}
+
 .custom-table{
         border: 1px solid black;
         border-collapse: collapse;
@@ -41,11 +45,7 @@ tr:nth-child(odd) #custom-table{
 
 
 .container2 {
-    width: 200%;
 
-}
-
-.container3 {
     width: 230%;
     height: 150%;
     max-height: calc(100% - 100px);
@@ -54,7 +54,6 @@ tr:nth-child(odd) #custom-table{
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
 
 .setRight {
     float: right;
@@ -111,7 +110,10 @@ tr:nth-child(odd) #custom-table{
     #mainArea {
         padding: 0 40px;
         background: #ededed;
-    }
+	width: 1000px;
+        height: 650px;
+        overflow: scroll;    
+}
     
   
 

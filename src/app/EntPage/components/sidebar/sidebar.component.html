@@ -3,8 +3,9 @@
         <a routerLink="/dashboard5" [routerLinkActive]="['router-link-active']" class="list-group-item">
             <i class="fa fa-fw fa-dashboard"></i>&nbsp;{{ '최신 뉴스' | translate }}
         </a>
-    
-        <a [routerLink]="['/User5']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+
+<!--
+	<a [routerLink]="['/User5']" [routerLinkActive]="['router-link-active']" class="list-group-item">
             <i class="fa fa-th-list"></i>&nbsp;&nbsp;{{ '유저 리스트' | translate }}
         </a>
         <a [routerLink]="['/School5']" [routerLinkActive]="['router-link-active']" class="list-group-item">
@@ -16,44 +17,45 @@
         <a [routerLink]="['/Organization5']" [routerLinkActive]="['router-link-active']" class="list-group-item">
             <i class="fa fa-th-list"></i>&nbsp;&nbsp;{{ '인증기관 리스트' | translate }}
         </a>
+-->
         <a [routerLink]="['/RequestResume5']" [routerLinkActive]="['router-link-active']" class="list-group-item">
             <i class="fa fa-th-list"></i>&nbsp;&nbsp;{{ '인증요청 리스트' | translate }}
         </a>
-      
-        
+   
+       <!-- 
         <div class="nested-menu">
                 <a class="list-group-item" (click)="addExpandClass('pages')">
                     <span><i class="fa fa-plus"></i>&nbsp; {{ '검색기능' | translate }}</span>
                 </a>
                 <li class="nested" [class.expand]="showMenu === 'pages'">
                     <ul class="submenu">
-                            <li>
-                                    <a [routerLink]="['/SearchtitleCer5']" [routerLinkActive]="['router-link-active']">
-                                       <i class="fa fa-th"></i>&nbsp;&nbsp;{{ '자격증 검색' | translate }}
-                                  </a>                    </li>
+ 	-->
+                         
+           <a [routerLink]="['/SearchtitleCer5']" [routerLinkActive]="['router-link-active']"  class="list-group-item">
+                <i class="fa fa-th-list"></i>&nbsp;&nbsp;{{ '자격증 검색' | translate }}
+            </a>                    
 
-                        <li>
-                         <a [routerLink]="['/SearchtitleEnt5']" [routerLinkActive]="['router-link-active']">
-                            <i class="fa fa-th"></i>&nbsp;&nbsp;{{ '기업 검색' | translate }}
-                         </a>                    </li>
-                         <li>
-                        <a [routerLink]="['/SearchtitleOrg5']" [routerLinkActive]="['router-link-active']" >
-                            <i class="fa fa-th"></i>&nbsp;&nbsp;{{ '기관 검색' | translate }}
+                       
+                         <a [routerLink]="['/SearchtitleEnt5']" [routerLinkActive]="['router-link-active']"  class="list-group-item">
+                            <i class="fa fa-th-list"></i>&nbsp;&nbsp;{{ '기업 검색' | translate }}
+                         </a>                    
+                        
+                        <a [routerLink]="['/SearchtitleOrg5']" [routerLinkActive]="['router-link-active']"   class="list-group-item">
+                            <i class="fa fa-th-list"></i>&nbsp;&nbsp;{{ '기관 검색' | translate }}
                         </a>          
-                         </li>
-                         <li>
-                                <a [routerLink]="['/SearchtitleSch5']" [routerLinkActive]="['router-link-active']" >
-                                    <i class="fa fa-th"></i>&nbsp;&nbsp;{{ '학교 검색' | translate }}
+                         
+                         
+                                <a [routerLink]="['/SearchtitleSch5']" [routerLinkActive]="['router-link-active']"  class="list-group-item">
+                                    <i class="fa fa-th-list"></i>&nbsp;&nbsp;{{ '학교 검색' | translate }}
                                 </a>          
-                         </li>
-                         <li>
-                                <a [routerLink]="['/SearchtitleUser5']" [routerLinkActive]="['router-link-active']" >
-                                    <i class="fa fa-th"></i>&nbsp;&nbsp;{{ '유저 검색' | translate }}
+                         
+                         
+                                <a [routerLink]="['/SearchtitleUser5']" [routerLinkActive]="['router-link-active']" class="list-group-item" >
+                                    <i class="fa fa-th-list"></i>&nbsp;&nbsp;{{ '유저 검색' | translate }}
                                 </a>          
-                         </li>
-                    </ul>
-                </li>
-            </div>
+                         
+                    
+                
         
   
         <div class="header-fields">

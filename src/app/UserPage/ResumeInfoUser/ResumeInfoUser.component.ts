@@ -59,6 +59,7 @@ export class ResumeInfoUserComponent implements OnInit {
 
   name = new FormControl("", Validators.required);
 
+  name2 = new FormControl("", Validators.required);
 
   assetId = new FormControl("", Validators.required);
 
@@ -69,29 +70,37 @@ export class ResumeInfoUserComponent implements OnInit {
 
   dob = new FormControl("", Validators.required);
 
-
+  dob2 = new FormControl("", Validators.required);
 
   supportField = new FormControl("", Validators.required);
+
+
+  supportField2 = new FormControl("", Validators.required);
 
 
 
   salaryRequirement = new FormControl("", Validators.required);
 
+  salaryRequirement2 = new FormControl("", Validators.required);
 
 
   majorActivities = new FormControl("", Validators.required);
+  majorActivities2 = new FormControl("", Validators.required);
 
 
 
   socialExperience = new FormControl("", Validators.required);
+  socialExperience2 = new FormControl("", Validators.required);
 
 
 
   skillsAndCapabilities = new FormControl("", Validators.required);
+  skillsAndCapabilities2 = new FormControl("", Validators.required);
 
 
 
   isPublic = new FormControl("", Validators.required);
+  isPublic2 = new FormControl("", Validators.required);
 
 
 
@@ -112,7 +121,7 @@ export class ResumeInfoUserComponent implements OnInit {
     this.myForm = fb.group({
 
 
-      name: this.name,
+      name2: this.name2,
 
 
       assetId: this.assetId,
@@ -122,31 +131,31 @@ export class ResumeInfoUserComponent implements OnInit {
 
 
 
-      dob: this.dob,
+      dob2: this.dob2,
 
 
 
-      supportField: this.supportField,
+      supportField2: this.supportField2,
 
 
 
-      salaryRequirement: this.salaryRequirement,
+      salaryRequirement2: this.salaryRequirement2,
 
 
 
-      majorActivities: this.majorActivities,
+      majorActivities2: this.majorActivities2,
 
 
 
-      socialExperience: this.socialExperience,
+      socialExperience2: this.socialExperience2,
 
 
 
-      skillsAndCapabilities: this.skillsAndCapabilities,
+      skillsAndCapabilities2: this.skillsAndCapabilities2,
 
 
 
-      isPublic: this.isPublic
+      isPublic2: this.isPublic2
 
 
     });
@@ -414,43 +423,43 @@ export class ResumeInfoUserComponent implements OnInit {
 
 
 
-      "name": this.name.value,
+      "name": this.name2.value,
 
 
 
-      "dob": this.dob.value,
+      "dob": this.dob2.value,
 
 
 
-      "supportField": this.supportField.value,
+      "supportField": this.supportField2.value,
 
 
 
-      "salaryRequirement": this.salaryRequirement.value,
-
-
-
-
-
-      "majorActivities": this.majorActivities.value,
+      "salaryRequirement": this.salaryRequirement2.value,
 
 
 
 
 
-      "socialExperience": this.socialExperience.value,
+      "majorActivities": this.majorActivities2.value,
 
 
 
 
 
-      "skillsAndCapabilities": this.skillsAndCapabilities.value,
+      "socialExperience": this.socialExperience2.value,
 
 
 
 
 
-      "isPublic": this.isPublic.value
+      "skillsAndCapabilities": this.skillsAndCapabilities2.value,
+
+
+
+
+
+      "isPublic": this.isPublic2.value
 
 
 
@@ -509,48 +518,17 @@ export class ResumeInfoUserComponent implements OnInit {
       .then((result) => {
         this.errorMessage = null;
         let formObject = {
-
-
           "assetId": null,
-
-
           "ownerId": null,
-
-
-          "name": null,
-
-
-          "dob": null,
-
-
-
-          "supportField": null,
-
-
-
-          "salaryRequirement": null,
-
-
-
-          "majorActivities": null,
-
-
-
-          "socialExperience": null,
-
-
-
-          "skillsAndCapabilities": null,
-
-
-
-          "isPublic": false
-
-
+          "name2": null,
+          "dob2": null,
+          "supportField2": null,
+          "salaryRequirement2": null,
+          "majorActivities2": null,
+          "socialExperience2": null,
+          "skillsAndCapabilities2": null,
+          "isPublic2": false
         };
-
-
-
 
         if (result.assetId) {
 
@@ -570,67 +548,67 @@ export class ResumeInfoUserComponent implements OnInit {
 
         if (result.name) {
 
-          formObject.name = result.name;
+          formObject.name2 = result.name;
 
         } else {
-          formObject.name = null;
+          formObject.name2 = null;
         }
 
 
         if (result.dob) {
 
-          formObject.dob = result.dob;
+          formObject.dob2 = result.dob;
 
         } else {
-          formObject.dob = null;
+          formObject.dob2 = null;
         }
 
         if (result.supportField) {
 
-          formObject.supportField = result.supportField;
+          formObject.supportField2 = result.supportField;
 
         } else {
-          formObject.supportField = null;
+          formObject.supportField2 = null;
         }
 
         if (result.salaryRequirement) {
 
-          formObject.salaryRequirement = result.salaryRequirement;
+          formObject.salaryRequirement2 = result.salaryRequirement;
 
         } else {
-          formObject.salaryRequirement = null;
+          formObject.salaryRequirement2 = null;
         }
 
         if (result.majorActivities) {
 
-          formObject.majorActivities = result.majorActivities;
+          formObject.majorActivities2 = result.majorActivities;
 
         } else {
-          formObject.majorActivities = null;
+          formObject.majorActivities2 = null;
         }
 
         if (result.socialExperience) {
 
-          formObject.socialExperience = result.socialExperience;
+          formObject.socialExperience2 = result.socialExperience;
 
         } else {
-          formObject.socialExperience = null;
+          formObject.socialExperience2 = null;
         }
 
         if (result.skillsAndCapabilities) {
 
-          formObject.skillsAndCapabilities = result.skillsAndCapabilities;
+          formObject.skillsAndCapabilities2 = result.skillsAndCapabilities;
 
         } else {
-          formObject.skillsAndCapabilities = null;
+          formObject.skillsAndCapabilities2 = null;
         }
 
         if (result.isPublic) {
 
-          formObject.isPublic = result.isPublic;
+          formObject.isPublic2 = result.isPublic;
 
         } else {
-          formObject.isPublic = false;
+          formObject.isPublic2 = false;
         }
 
 
@@ -661,34 +639,34 @@ export class ResumeInfoUserComponent implements OnInit {
       "ownerId": null,
 
 
-      "name":null,
+      "name2":null,
 
 
-      "dob": null,
-
-
-
-      "supportField": null,
+      "dob2": null,
 
 
 
-      "salaryRequirement": null,
+      "supportField2": null,
 
 
 
-      "majorActivities": null,
+      "salaryRequirement2": null,
 
 
 
-      "socialExperience": null,
+      "majorActivities2": null,
 
 
 
-      "skillsAndCapabilities": null,
+      "socialExperience2": null,
 
 
 
-      "isPublic": false
+      "skillsAndCapabilities2": null,
+
+
+
+      "isPublic2": false
 
 
     });

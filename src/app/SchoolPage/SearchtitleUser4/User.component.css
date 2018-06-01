@@ -1,4 +1,9 @@
-h1 {
+
+h2 {
+	color: black;
+}
+
+h1 { 
 	color: white;
 }
 
@@ -111,8 +116,10 @@ tr:nth-child(odd) #custom-table{
     #mainArea {
         padding: 0 40px;
         background: #ededed;
-    }
-    
+	width: 1000px;
+	height: 650px;
+	overflow: scroll;
+    }    
   
 
     #name {

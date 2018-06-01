@@ -24,8 +24,7 @@ const routes: Routes = [
             { path: 'SearchtitleEnt5', loadChildren: './SearchtitleEnt5/Enterprise.module#EnterpriseModule' },
             { path: 'SearchtitleSch5', loadChildren: './SearchtitleSch5/School.module#SchoolModule' },
             { path: 'SearchtitleOrg5', loadChildren: './SearchtitleOrg5/Organization.module#OrganizationModule' },
-            { path: 'SearchtitleUser5', loadChildren: './SearchtitleUser5/User.module#UserModule' },
-            { path: 'SearchtitleInfoSch5', loadChildren: './SearchtitleInfoSch5/UserInfoInSch.module#UserInfoInSchModule' }
+            { path: 'SearchtitleUser5', loadChildren: './SearchtitleUser5/User.module#UserModule' }
 
 
 

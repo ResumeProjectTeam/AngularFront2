@@ -1,3 +1,4 @@
+
 .custom-table{
         border: 1px solid black;
         border-collapse: collapse;
@@ -22,11 +23,11 @@
         color: white;
 }
 tr:nth-child(even) #custom-table{
-	background-color: #e8e8e8;
+   background-color: #e8e8e8;
 }
 
 tr:nth-child(odd) #custom-table{
-	background-color: white;
+   background-color: white;
 }
 
 
@@ -107,6 +108,9 @@ tr:nth-child(odd) #custom-table{
     #mainArea {
         padding: 0 40px;
         background: #ededed;
+	width: 1000px;
+        height: 650px;
+        overflow: scroll;
     }
     
   

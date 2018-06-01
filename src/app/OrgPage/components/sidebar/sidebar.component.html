@@ -18,6 +18,8 @@
         <a [routerLink]="['/AwardDetails']" [routerLinkActive]="['router-link-active']" class="list-group-item">
             <i class="fa fa-fw fa-bar-chart-o"></i>&nbsp;{{ '수상경력 조회' | translate }}
         </a> -->
+
+	<!--
         <a [routerLink]="['/User3']" [routerLinkActive]="['router-link-active']" class="list-group-item">
             <i class="fa fa-th-list"></i>&nbsp;&nbsp;{{ '유저 리스트' | translate }}
         </a>
@@ -30,14 +32,13 @@
         <a [routerLink]="['/Organization3']" [routerLinkActive]="['router-link-active']" class="list-group-item">
             <i class="fa fa-th-list"></i>&nbsp;&nbsp;{{ '인증기관 리스트' | translate }}
         </a>
+
+       -->
         <a [routerLink]="['/RequestResume3']" [routerLinkActive]="['router-link-active']" class="list-group-item">
             <i class="fa fa-th-list"></i>&nbsp;&nbsp;{{ '인증요청 리스트' | translate }}
         </a>
-     
-        <!-- <img src="assets/images/block.jpg" width="230px" height="95px"> -->
-        <!-- <a [routerLink]="['/RequestResume']" [routerLinkActive]="['router-link-active']" class="list-group-item">
-            <i class="fa fa-th-list"></i>&nbsp;&nbsp;{{ '인증요청 리스트' | translate }}
-        </a> -->
+	 
+
         
         
         
@@ -59,12 +60,6 @@
         <a [routerLink]="['/components2']" [routerLinkActive]="['router-link-active']" class="list-group-item">
             <i class="fa fa-th-list"></i>&nbsp;{{ 'Component2' | translate }}
         </a> -->
-        <div class="nested-menu">
-                <a class="list-group-item" (click)="addExpandClass('pages')">
-                    <span><i class="fa fa-plus"></i>&nbsp; {{ '검색기능' | translate }}</span>
-                </a>
-                <li class="nested" [class.expand]="showMenu === 'pages'">
-                    <ul class="submenu">
                             <!-- <li>
                                     <a [routerLink]="['/SearchtitleCer5']" [routerLinkActive]="['router-link-active']">
                                        <i class="fa fa-th"></i>&nbsp;&nbsp;{{ '자격증 검색' | translate }}
@@ -74,28 +69,25 @@
                                  <a [routerLink]="['/SearchtitleInfoSch5']" [routerLinkActive]="['router-link-active']">
                                    <i class="fa fa-th"></i>&nbsp;&nbsp;{{ '학력 검색' | translate }}
                               </a>                    </li> -->
-                        <li>
-                         <a [routerLink]="['/SearchtitleEnt3']" [routerLinkActive]="['router-link-active']">
-                            <i class="fa fa-th"></i>&nbsp;&nbsp;{{ '기업 검색' | translate }}
-                         </a>                    </li>
-                         <li>
-                        <a [routerLink]="['/SearchtitleOrg3']" [routerLinkActive]="['router-link-active']" >
-                            <i class="fa fa-th"></i>&nbsp;&nbsp;{{ '기관 검색' | translate }}
+                         <a [routerLink]="['/SearchtitleEnt3']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                            <i class="fa fa-fw fa-bar-chart-o"></i>&nbsp;&nbsp;{{ '기업 검색' | translate }}
+                         </a>                    
+                        <a [routerLink]="['/SearchtitleOrg3']" [routerLinkActive]="['router-link-active']"  class="list-group-item">
+                            <i class="fa fa-fw fa-bar-chart-o"></i>&nbsp;&nbsp;{{ '기관 검색' | translate }}
                         </a>          
-                         </li>
-                         <li>
-                                <a [routerLink]="['/SearchtitleSch3']" [routerLinkActive]="['router-link-active']" >
-                                    <i class="fa fa-th"></i>&nbsp;&nbsp;{{ '학교 검색' | translate }}
+                         
+                        
+                                <a [routerLink]="['/SearchtitleSch3']" [routerLinkActive]="['router-link-active']"  class="list-group-item">
+                                    <i class="fa fa-fw fa-bar-chart-o"></i>&nbsp;&nbsp;{{ '학교 검색' | translate }}
                                 </a>          
-                         </li>
-                         <li>
-                                <a [routerLink]="['/SearchtitleUser3']" [routerLinkActive]="['router-link-active']" >
-                                    <i class="fa fa-th"></i>&nbsp;&nbsp;{{ '유저 검색' | translate }}
+                         
+                         
+                                <a [routerLink]="['/SearchtitleUser3']" [routerLinkActive]="['router-link-active']"  class="list-group-item">
+                                    <i class="fa fa-fw fa-bar-chart-o"></i>&nbsp;&nbsp;{{ '유저 검색' | translate }}
                                 </a>          
-                         </li>
-                    </ul>
-                </li>
-            </div>
+                         
+                    
+                
         
         <!-- <a class="list-group-item more-themes" href="http://www.strapui.com/" >
             {{ 'More Theme' | translate }}

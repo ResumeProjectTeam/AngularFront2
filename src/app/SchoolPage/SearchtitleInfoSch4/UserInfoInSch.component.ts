@@ -271,9 +271,6 @@ export class UserInfoInSchComponent implements OnInit {
         Id = result['participant'];
         Id = Id.split('#');
         this.currentId = Id[1];
-
-        
-     
         this.getMyUserInfoInSchList();
       })
 
@@ -295,7 +292,7 @@ export class UserInfoInSchComponent implements OnInit {
 
 
   getMyUserInfoInSchList(): Promise<any> {
-    return   this.serviceUserInfoInSch.getSystemQueryUserInfoInSch("targetUserId", this.currentId)
+    return   this.serviceUserInfoInSch.getAll()
     .toPromise()
     .then((userInfoInSch) => {
 
@@ -322,10 +319,11 @@ export class UserInfoInSchComponent implements OnInit {
 
 
   getMyAuthenticationList(): Promise<any> {
-    return   this.serviceUserInfoInSch.getSystemQueryAuthentication("targetUserId", this.currentId)
+    return   this.serviceUserInfoInSch.getAll2()
     .toPromise()
     .then((authenticationList) => {
       this.myAuthenticationList = authenticationList;
+      console.log(this.myAuthenticationList);
     })
     .catch((error) => {
       console.log(error);

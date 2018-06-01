@@ -12,10 +12,11 @@ export class LoginComponent implements OnInit {
     constructor(public router: Router) {}
 
     private authGitHub;
-
+    private authGoogle;
     ngOnInit() {
         let IpConfigObj = new IpConfig();
 	this.authGitHub = IpConfigObj.getIpAuthGitHub();
+        this.authGoogle = IpConfigObj.getIpAuthGoogle();
 	}
 
     goToGitHubLogin() {
@@ -24,6 +25,12 @@ export class LoginComponent implements OnInit {
    
     	return this.authGitHub;
 
+    }
+    goToGoogleLogin(){
+	let IpConfigObj = new IpConfig();
+        this.authGoogle = IpConfigObj.getIpAuthGoogle();
+
+        return this.authGoogle;
     }
     onLoggedin() {
         localStorage.setItem('isLoggedin', 'true');
